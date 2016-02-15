@@ -15,15 +15,10 @@ aircraftProblemControllers.controller('homeController', ['$scope', 'aircraftQueu
     // bind the queue
     $scope.queues = aircraftQueueService.queues;
 
-    // bind the queue names
-    $scope.queueNames = aircraftQueueService.queuesNamesInPriorityOrder;
-
     // bind the enqueueing
     $scope.enqueue = aircraftQueueService.enqueueAircraft;
 
     // bind the dequeing
     $scope.dequeue = aircraftQueueService.dequeueAircraft;
-
-    $scope.lastDequeuedAircraft = aircraftQueueService.lastDequeuedAircraft;
 
   }]);
