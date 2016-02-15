@@ -1,0 +1,26 @@
+<div class="container">
+  <h1> Aircraft Queueing System</h1>
+
+  <hr>
+
+  <button type="button" ng-click="systemBoot();"> System Boot</button>
+
+  <br>
+  <hr>
+
+  <select ng-model="selectedQueue" ng-options="queue.name for queue in queues">
+  </select>
+
+  <button type="button" ng-click="enqueue(selectedQueue);"> Enqueue </button>
+
+  <br>
+  <hr>
+
+  <button type="button" ng-click="dequeue();"> Dequeue </button>
+
+  <hr>
+  <h2>Queues</h2>
+  <div ng-repeat="queue in queues">
+    {{ queue.name }} = {{ queue.aircrafts.length }}
+  </div>
+</div>
